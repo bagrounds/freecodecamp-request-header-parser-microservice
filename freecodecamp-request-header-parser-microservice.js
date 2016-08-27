@@ -36,7 +36,7 @@
     var agent = useragent.parse(request.headers['user-agent'])
 
     return {
-      ipaddress: /:([\d\.]+)$/.exec(request.connection.remoteAddress)[1],
+      ipaddress: /:([\d\.]+)$/.exec(request.ip)[1],
       language: /^(.*);/.exec(request.headers['accept-language'])[1],
       software: agent.os.family
     }
