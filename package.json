@@ -1,0 +1,30 @@
+{
+  "name": "freecodecamp-request-header-parser-microservice",
+  "version": "0.1.0",
+  "description": "https://www.freecodecamp.com/challenges/request-header-parser-microservice",
+  "main": "freecodecamp-request-header-parser-microservice.js",
+  "scripts": {
+    "start": "node freecodecamp-request-header-parser-microservice.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagrounds/freecodecamp-request-header-parser-microservice.git"
+  },
+  "keywords": [
+    "freecodecamp",
+    "request",
+    "header",
+    "parser",
+    "microservice"
+  ],
+  "author": "bagrounds@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bagrounds/freecodecamp-request-header-parser-microservice/issues"
+  },
+  "homepage": "https://github.com/bagrounds/freecodecamp-request-header-parser-microservice#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "useragent": "^2.1.9"
+  }
+}
