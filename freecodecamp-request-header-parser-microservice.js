@@ -10,9 +10,11 @@
   /* imports */
   var express = require('express')
   var useragent = require('useragent')
+  var requestIp = require('request-ip')
 
   var PORT = process.env.PORT || 8080
   var app = express()
+  app.use(requestIp.mw())
 
   // handle dates and timestamps
   app.get('/', function (request, response) {
@@ -35,9 +37,8 @@
   function parseHeader (request) {
     var agent = useragent.parse(request.headers['user-agent'])
 
-    var ip = request.headers['x-forwarded-for'] || request.ip
     return {
-      ipaddress: /:([\d\.]+)$/.exec(ip)[1],
+      ipaddress: request.clientIp,
       language: /^(.*);/.exec(request.headers['accept-language'])[1],
       software: agent.os.family
     }
