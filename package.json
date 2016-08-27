@@ -25,6 +25,7 @@
   "homepage": "https://github.com/bagrounds/freecodecamp-request-header-parser-microservice#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "request-ip": "^1.2.2",
     "useragent": "^2.1.9"
   }
 }
