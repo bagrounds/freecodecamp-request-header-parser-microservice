@@ -35,8 +35,9 @@
   function parseHeader (request) {
     var agent = useragent.parse(request.headers['user-agent'])
 
+    var ip = request.headers['x-forwarded-for'] || request.ip
     return {
-      ipaddress: /:([\d\.]+)$/.exec(request.ip)[1],
+      ipaddress: /:([\d\.]+)$/.exec(ip)[1],
       language: /^(.*);/.exec(request.headers['accept-language'])[1],
       software: agent.os.family
     }
